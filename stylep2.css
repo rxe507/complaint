@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #14752c;
+    width: 100;
+    position: fixed;
+    z-index: 2500;
+    display: flex;
+    align-items: center;
+    padding: 0px 550px;
+}
+
+.logo{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.section {
+    padding: 250px 400px;
+}
+
+
+
+
+.main h2{
+    color: #000;
+    font-size: 32PX;
+    padding-top: 130PX;
+    text-align: center;
+
+    
+}
+
+
+
+.input{
+    text-align: center;
+   transform: scale(1.2);
+   
+}
+
+label[for="complaint"]{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+ color: #080808;
+    font-size: 10px;
+}
+
+input[type="text"] {
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 13px;
+    width: 180px;
+ height: 25px;
+ 
+   
+    
+}
+
+input[type="text"]:focus {
+    text-align: center;
+    border-color: #4caf50;
+    outline: none;
+
+}
+input[type="text"]:valid {
+    background-color: #f3e95b;
+  }
+
+label[for="phone-number"]{
+    font-size: 20px;
+
+   
+}
+
+input[type="tel"] {
+    padding: 2px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 13px;
+    width: 180px;
+ height: 25px;
+    text-align: center;
+   margin: 20px;
+}
+
+input[type="tel"]:focus {
+    text-align: center;
+    border-color: #26da2c;
+    outline: none;
+
+}
+
+input[type="tel"]:valid {
+    background-color: #8cdf97;
+
+}
+
+textarea[name="complaint"]{
+
+    background-color: #f7f7f7;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   padding: 20px;
+   margin-bottom: 20px;
+   font-size: 13px;
+   color: #333;
+   line-height: 10px;
+}
+
+input[type="submit"] {
+
+    
+    
+        border: 1 px solid #353002;
+        padding: 10px;
+        color: #fff;
+        background: #02350e;
+        border-radius: 5px;
+        transition: all 0.5s;
+        font-size: 15px;
+     width: 100px;
+     
+     }
+    
+     button[id="record-button"]{
+       transform: scale(1.1);
+       transition: 0.7s ease;
+       margin-bottom: 20px;
+       width: 80px;
+
+     }
+    
+     Your site is live at https://rxe507.github.io/complaints/
+     Last deployed by @rxe507 rxe507 1 

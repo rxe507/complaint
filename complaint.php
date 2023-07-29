@@ -1,27 +1,32 @@
-<?php
-include('inc/connections.php');
+<<?php
+$servername = "localhost";
+$username = "root";
+$password = " ";
+$dbname = "complaint";
 
+// إنشاء اتصال بقاعدة البيانات
+$conn = new mysqli($servername, $username, $password, $dbname);
 
+// التحقق من نجاح الاتصال
 if ($conn->connect_error) {
-    die("فشل الاتصال: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// استقبال البيانات المرسلة من النموذج
-$id_number = isset($_POST['id_number']) ? $_POST['id_number'] : '';
-$phone_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : '';
-$complaint_text = isset($_POST['complaint_text']) ? $_POST['complaint_text'] : '';
+// حفظ المعلومات المدخلة في النموذج في قاعدة البيانات
+if (isset($_POST['id-number']) && isset($_POST['phone-number']) && isset($_POST['complaint'])) {
+    $id_number = $_POST['id-number'];
+    $phone_number = $_POST['phone-number'];
+    $complaint = $_POST['complaint'];
 
-// إدخال البيانات في جدول قاعدة البيانات
-$sql = "INSERT INTO complaints (id_number, phone_number, complaint_text) VALUES ('$id_number', '$phone_number', '$complaint_text')";
+    $sql = "INSERT INTO complaints (id_number, phone_number, complaint) VALUES ('$id_number', '$phone_number', '$complaint')";
 
-if ($conn->query($sql) === TRUE) {
-    echo "تم حفظ الشكوى بنجاح";
-} else {
-    echo "حدث خطأ أثناء حفظ الشكوى: " . $conn->error;
+    if ($conn->query($sql) === TRUE) {
+        echo "تم تقديم الشكوى بنجاح";
+    } else {
+        echo "خطأ في تقديم الشكوى: " . $conn->error;
+    }
 }
-
-
 
 // إغلاق الاتصال بقاعدة البيانات
 $conn->close();
-
+?>
